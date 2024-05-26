@@ -16,7 +16,6 @@ public class UserRepository implements GBRepository {
     public UserRepository(String fileName) {
         this.mapper = new UserMapper();
         this.fileName = fileName;
-        // Инициализация файла
         try (FileWriter writer = new FileWriter(fileName, true)) {
             writer.flush();
         } catch (IOException e) {
